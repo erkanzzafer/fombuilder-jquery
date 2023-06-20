@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css"
+    />
+    <style>
+      body {
+  background: lightgrey;
+}
+
+.fb-render {
+  margin: auto;
+  max-width: 1280px
+}
+    </style>
+  </head>
+  <body>
+    <div id="form-builder"></div>
+        <button id="submit-form">Formu Gönder</button>
+      </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+
+    <script src="https://formbuilder.online/assets/js/form-builder.min.js"></script>
+    <script>
+        $(document).ready(function() {
+          $('#form-builder').formBuilder();
+        
+          $('#submit-form').click(function() {
+            var formData = $('#form-builder').formBuilder('getData');
+            console.log(formData);
+            // Form verilerini işleme veya sunucuya gönderme
+          });
+        });
+        </script>
+        <script>
+          jQuery(function($) {
+  var options = {
+      i18n: {
+        override: {
+          'en-US': {
+            addOption: 'Add Option +',
+          allFieldsRemoved: 'All fields were removed.',
+          allowMultipleFiles: 'Allow users to upload multiple files',
+          autocomplete: 'Tamamlayıcı',
+          button: 'Buton',
+          cannotBeEmpty: 'This field cannot be empty',
+          checkboxGroup: 'Onay Kutusu',
+          className: 'Class',
+          clearAllMessage: 'Are you sure you want to clear all fields?',
+          clear: 'Temizle',
+          close: 'Kapat',
+          content: 'Content',
+          copy: 'Copy To Clipboard',
+          copyButton: '&#43;',
+          copyButtonTooltip: 'Copy',
+          dateField: 'Pick a date',
+          description: 'Help Text',
+          descriptionField: 'Description',
+          devMode: 'Developer Mode',
+          editNames: 'Edit Names',
+          editorTitle: 'Form Elements',
+          editXML: 'Edit XML',
+          enableOther: 'Enable &quot;Other&quot;',
+          enableOtherMsg: 'Let users to enter an unlisted option',
+          fieldNonEditable: 'This field cannot be edited.',
+          fieldRemoveWarning: 'Are you sure you want to remove this field?',
+          fileUpload: 'File Upload',
+          formUpdated: 'Form Updated',
+          getStarted: 'Drag a field from the right to this area',
+          header: 'Headerz',
+          hide: 'Edit',
+          hidden: 'Hidden Input',
+          inline: 'Inline',
+          inlineDesc: 'Display {type} inline',
+          label: 'Etiket',
+          labelEmpty: 'Field Label cannot be empty',
+          limitRole: 'Limit access to one or more of the following roles:',
+          mandatory: 'Mandatory',
+          maxlength: 'Max Length',
+          minOptionMessage: 'This field requires a minimum of 2 options',
+          multipleFiles: 'Multiple Files',
+          name: 'Name',
+          no: 'No',
+          noFieldsToClear: 'There are no fields to clear',
+          number: 'Number',
+          off: 'Off',
+          on: 'On',
+          option: 'Option',
+          options: 'Options',
+          optional: 'optional',
+          optionLabelPlaceholder: 'Label',
+          optionValuePlaceholder: 'Value',
+          optionEmpty: 'Option value required',
+          other: 'Other',
+          paragraph: 'Paragraph',
+          placeholder: 'Placeholder',
+          'placeholder.value': 'Value',
+          'placeholder.label': 'Label',
+          'placeholder.text': '',
+          'placeholder.textarea': '',
+          'placeholder.email': 'Enter you email',
+          'placeholder.placeholder': '',
+          'placeholder.className': 'space separated classes',
+          'placeholder.password': 'Enter your password',
+          preview: 'Preview',
+          radioGroup: 'Radiohead',
+          radio: 'Radio',
+          removeMessage: 'Remove Element',
+          removeOption: 'Remove Option',
+          remove: '&#215;',
+          required: 'Gerekli',
+          richText: 'Rich Text Editor',
+          roles: 'Access',
+          rows: 'Rows',
+          save: 'Kaydet',
+          selectOptions: 'Options',
+          select: 'Fabulous Dropdown',
+          selectColor: 'Select Color',
+          selectionsMessage: 'Allow Multiple Selections',
+          size: 'Size',
+          'size.xs': 'Extra Small',
+          'size.sm': 'Small',
+          'size.m': 'Default',
+          'size.lg': 'Large',
+          style: 'Style',
+          styles: {
+            btn: {
+              'default': 'Default',
+              danger: 'Danger',
+              info: 'Info',
+              primary: 'Primary',
+              success: 'Success',
+              warning: 'Warning'
+            }
+          },
+          subtype: 'Type',
+          text: 'Text Field',
+          textArea: 'Text Area',
+          toggle: 'Toggle',
+          warning: 'Warning!',
+          value: 'Değer',
+          viewJSON: '{  }',
+          viewXML: '&lt;/&gt;',
+          yes: 'Evet'
+          }
+        }
+      }
+    },
+    $fbTemplate = $(document.getElementById('fb-editor'));
+  $fbTemplate.formBuilder(options);
+});
+        </script>
+   
+        
+        
+  </body>
+</html>
